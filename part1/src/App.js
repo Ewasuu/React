@@ -1,26 +1,25 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-import {getGifs} from './actions/getGifs'
+import React from 'react'
 import './App.css'
 import { ListOfGifs } from './components/list_of_gifs'
+import {Route, Link} from 'wouter'
 
 
 
 
+export default function App(){  
 
-export default function App(props){
-  const [gif, setGif] = useState([])
   
-  useEffect(()=>
-    getGifs(setGif, {keyword : 'sasuke'})
-    
-  , []) 
   
   return (
     <div className='App-header'> 
       <h1>Giffy</h1>
-     {<ListOfGifs gif={gif} />}
+      <form onSubmit={(e) => e.preventDefault()}> 
+        <input type='search' />
+      </form>
+      <Route path='/gif/:keyword' component={ListOfGifs} />
+      
     </div>
   )
 }
 
+/* <ListOfGifs gif={gif} />  */

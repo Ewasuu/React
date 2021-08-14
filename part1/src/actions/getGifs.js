@@ -2,7 +2,7 @@ const apiKey = 'api_key=R5tFwIw5Ae1kPpVXwVE9pT7n8OohBnK7'
 
 
 export  function getGifs(updater, {keyword = 'sasuke'} = {}){
-    
+    console.log(keyword)
     const url = `https://api.giphy.com/v1/gifs/search?${apiKey}&q=${keyword}&limit=10&offset=0&rating=r&lang=en`
 
     return(
