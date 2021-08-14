@@ -1,20 +1,26 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import getGifs from './actions/getGifs'
+import {getGifs} from './actions/getGifs'
 import './App.css'
+import { ListOfGifs } from './components/list_of_gifs'
+
+
+
 
 
 export default function App(props){
   const [gif, setGif] = useState([])
   
   useEffect(()=>
-    getGifs(setGif)
+    getGifs(setGif, {keyword : 'sasuke'})
+    
   , []) 
-
+  
   return (
     <div className='App-header'> 
-      <h1>Demen sexo</h1>
-     {gif.map( newgif => <img key={newgif} src={newgif} alt='jsjs'  />)}
+      <h1>Giffy</h1>
+     {<ListOfGifs gif={gif} />}
     </div>
   )
 }
+

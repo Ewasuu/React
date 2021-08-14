@@ -1,14 +1,23 @@
+const apiKey = 'api_key=R5tFwIw5Ae1kPpVXwVE9pT7n8OohBnK7'
 
-const url = `https://api.giphy.com/v1/gifs/search?api_key=R5tFwIw5Ae1kPpVXwVE9pT7n8OohBnK7&q=naruto&limit=10&offset=0&rating=g&lang=en`
 
+export  function getGifs(updater, {keyword = 'sasuke'} = {}){
+    
+    const url = `https://api.giphy.com/v1/gifs/search?${apiKey}&q=${keyword}&limit=10&offset=0&rating=r&lang=en`
 
-export default function getGifs( updater){
+    return(
     fetch(url)
       .then(res => res.json())
       .then(res => {
         const {data} = res
-        const gif = data.map(image => image.images.downsized_medium.url)
+        const gif = data.map(image => {
+            const { id, title} = image
+            const {url} = image.images.downsized_medium
+            return {id, title, url}
+        }
+        )
         updater(gif)
-      }
-    )
+        }
+        
+    ))
 }
