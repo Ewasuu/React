@@ -2,8 +2,10 @@ import React from "react"
 
 export function Gif({id, url, title}){
     return(<div className='img-container'>
-                <img key={id} src={url} alt={title}  />
-                
+                <figure>
+                 <a href={url} target='_blank' > <img key={id} src={url} alt={title}  /> </a>
+                    
+                </figure>
             </div>
         )
 }

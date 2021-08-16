@@ -14,6 +14,11 @@
 img{
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+}
+figure{
+  width: 100%;
+  height: 100%
 }
 .Header{
   display: flex;
@@ -52,6 +57,7 @@ img{
   place-content: center;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  gap: .8rem;
 }
 .Home-Link-section{
   display: flex;
@@ -60,18 +66,6 @@ img{
   margin: auto;
 }
 
-.Home-Link-section h2{
-  color: hsl(300, 100%, 50%);
-  font-weight: 500;
-}
-
-.Home-Link{
-  color: hsl(300, 100%, 50%);
-  font-size: 1.5rem;
-  text-decoration: none;
-  margin-top: 1rem;
-  margin-left: 2rem;
-}
 .img-container{
   display: flex;
   justify-content: center;

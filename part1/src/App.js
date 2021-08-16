@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './App.css'
-import { ListOfGifs } from './components/list_of_gifs'
+import './styles/App.css'
 import {Route, Link, useLocation} from 'wouter'
-import { home } from './components/home'
+import { Home } from './components/home'
+import { Searcher } from './components/searcher'
 
 
 
@@ -27,8 +27,8 @@ export default function App(){
           <input placeholder='Search Giff' onChange={handleChange} type='search' />
         </form>
       </div>
-      <Route path='/gif/:keyword' component={ListOfGifs} />
-      <Route path='/' component={home} />
+      <Route path='/gif/:keyword' component={Searcher} />
+      <Route path='/' component={Home} />
     </div>
   )
 }
