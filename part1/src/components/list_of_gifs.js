@@ -11,8 +11,8 @@ export function ListOfGifs({params}){
         
        }, [keyword]) 
     return(
-        <>
+        <div className='gif-container'>
            {gif.map( ({id, url, title}) => <Gif key={id} id={id} url={url} title={title} /> )}
-        </>
+        </div>
     )
 }

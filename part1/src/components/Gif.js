@@ -1,9 +1,9 @@
 import React from "react" 
 
 export function Gif({id, url, title}){
-    return(<div key={id} className='giff'>
-                <img src={url} alt={title}  />
-                <p>{title}</p>
+    return(<div className='img-container'>
+                <img key={id} src={url} alt={title}  />
+                
             </div>
         )
 }

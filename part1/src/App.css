@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -6,22 +11,69 @@
   height: 40vmin;
   pointer-events: none;
 }
+img{
+  width: 100%;
+  height: 100%;
+}
+.Header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.Header a{
+  text-decoration: none;
+  color: hsl(300, 100%, 50%);
+}
+.title{
+  letter-spacing: 5px;
+  font-style: italic;
+  font-weight: bolder;
+}
+.Header input{
+  color: hsl(0, 0%, 84%);
+  margin: 1rem;
+ padding: .4rem 1rem;
+  width:  14rem;
+  border-radius: 20px;
+  background-color: hsla(0, 0%, 100%, 0.248);
+  border: 1px solid hsl(0, 0%, 100%);
+  outline: none;
+}
+.Header input::placeholder{
+  color: hsla(0, 0%, 100%, 0.481);
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gif-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+  place-content: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.Home-Link-section{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.Home-Link-section h2{
+  color: hsl(300, 100%, 50%);
+  font-weight: 500;
+}
+
+.Home-Link{
+  color: hsl(300, 100%, 50%);
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.img-container{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
-}
-.giff{
-  width: 500px;
-}
-
