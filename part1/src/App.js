@@ -1,36 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './styles/App.css'
-import {Route, Link, useLocation} from 'wouter'
+import {Route} from 'wouter'
 import { Home } from './components/home'
-import { Searcher } from './components/searcher'
-
+import  Searcher  from './actions/searcher'
+import { ListOfTrends } from './components/List_of_trends'
+import { Header } from './components/header'
 
 
 
 export default function App(){  
-  const [keyword, setKeyword] = useState('')
-  const [path, push] = useLocation()
-  console.log(path)
-  const handleSubmit = (e)=>{
-    e.preventDefault()
-    push(`/gif/${keyword} `)
-  }
-  const handleChange = (e)=>{
- setKeyword(e.target.value)
-  }
+ 
   
   return (
-    <div> 
-      <div className='Header' >
-        <Link to='/' ><h1 className='title'>Giffy</h1> </Link>
-        <form onSubmit={handleSubmit}>
-          <input placeholder='Search Giff' onChange={handleChange} type='search' />
-        </form>
-      </div>
-      <Route path='/gif/:keyword' component={Searcher} />
-      <Route path='/' component={Home} />
+    <div>
+        <Header/>      
+        <div className='content'>
+          <Route path='/gif/:keyword' component={Searcher} />
+          <Route path='/' component={Home} />
+           <ListOfTrends/>
+        </div>      
     </div>
   )
 }
 
-/* <ListOfGifs gif={gif} />  */

@@ -11,7 +11,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    animation: girar 1s linear infinite;
+    animation: girar .7s linear infinite;
   }
   
   @keyframes girar{

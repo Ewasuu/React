@@ -29,7 +29,14 @@ background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
-
+body::-webkit-scrollbar{
+  background-color: transparent;
+ 
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #ff0069;
+  border-radius: 100px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
