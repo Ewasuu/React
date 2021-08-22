@@ -1,7 +1,7 @@
 import React  from "react" 
 
 
-export function Gif({id, url, title}){
+function Gif({id, url, title}){
     
     
     return(<div className='img-container'>
@@ -12,3 +12,6 @@ export function Gif({id, url, title}){
         )
 }
 
+export default React.memo(Gif, (prevprops, nextprops) => {
+    return prevprops.id === nextprops.id
+})

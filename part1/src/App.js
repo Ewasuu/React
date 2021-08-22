@@ -3,7 +3,7 @@ import './styles/App.css'
 import {Route} from 'wouter'
 import { Home } from './components/home'
 import  Searcher  from './actions/searcher'
-import { ListOfTrends } from './components/List_of_trends'
+import  ListOfTrends  from './components/List_of_trends'
 import { Header } from './components/header'
 
 

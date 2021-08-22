@@ -9,7 +9,7 @@ export function Home(){
     }
     return(
         <>
-            {params.keyword !== 'undefined'? <h2 id='last-search' >-----Last Search-----</h2> : <h2 id='last-search' >-----GIFS-----</h2>}
+            {params.keyword !== 'undefined' && params.keyword !== 'null' && params.keyword !== null ? <h2 id='last-search' >-----Last Search-----</h2> : <h2 id='last-search' >-----GIFS-----</h2>}
             <h2 id='trends' >Trends</h2>   
             {Searcher({params})}
         </>

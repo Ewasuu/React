@@ -88,7 +88,6 @@ figure{
   padding-top: 7rem;
 }
 .gif-container div:nth-child(4n+1) {
-  /* grid-column-end: span 2; */
   grid-row-end: span 1;
 }
 .gif-container div:nth-child(2) {
@@ -176,25 +175,38 @@ aside a{
     width: 100%;
     padding-bottom: 0;
   }
+  
   #trends{
     display: none;
   }
   .trends-bar{
-     margin-top: 1rem;
-    position: static;
-    display: block;
-    height: 10.22rem;
-    width: 100%;
-    padding: 0;
+     display: none;
 
   }  
   aside{
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    padding-bottom: 1rem;
+    display: none;
   }
   aside a{
-    border: none;
+    display: none;
   }
 
+}
+@media screen and (max-width: 630px){
+  .gif-container{
+    
+    grid-template-columns: repeat(2, minmax(100px, 200px));
+    
+  }
+  .gif-container div:nth-child(4n+1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .gif-container div:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .gif-container div:nth-child(5) {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }

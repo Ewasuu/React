@@ -14,12 +14,9 @@ export default function Searcher({params}){
   const {isNearScreen} = useNearScreen({externalRef: loader ? null: externalRef})
   localStorage.setItem('Last Keyword', keyword)
 
-  // const handleClick = ()=>{
-  //   setOfset( ofset + 25)
-  // }
-  // eslint-disable-next-line 
+  
   const handleNextPage = useCallback(debounce(
-    ()=> setOfset(ofset + 1), 1000
+    ()=> setOfset(ofset + 1), 500
   ), [ofset])
   
   useEffect( function(){
