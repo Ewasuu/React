@@ -5,6 +5,7 @@ import { Home } from './components/home'
 import  Searcher  from './actions/searcher'
 import  ListOfTrends  from './components/List_of_trends'
 import { Header } from './components/header'
+import { SomethingHappend } from './components/Error'
 
 
 
@@ -17,6 +18,7 @@ export default function App(){
         <div className='content'>
           <Route path='/gif/:keyword' component={Searcher} />
           <Route path='/' component={Home} />
+          <Route path='gif/404' component={SomethingHappend} />
            <ListOfTrends/>
         </div>      
     </div>
