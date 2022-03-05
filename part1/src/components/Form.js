@@ -8,8 +8,10 @@ export function Form(){
     
     const handleSubmit = (e)=>{
         e.preventDefault()
-        push(`/gif/${Search} `)
-        form.current.reset()
+        if (Search !== '') {
+            push(`/gif/${Search} `)
+            form.current.reset()
+        }
     }
     const handleChange = (e)=>{
         setSearch(e.target.value)

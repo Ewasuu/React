@@ -3,7 +3,7 @@ import { apiKey, defaultUrlStart } from "./api_key"
 
 
 export  async function GetGifs({keyword = 'sasuke'} = {}, page){
-    const url = `${defaultUrlStart}/gifs/search?${apiKey}&q=${keyword}&limit=25&offset=${page * 25}&rating=r&lang=en}`
+    const url = `${defaultUrlStart}/gifs/search?${apiKey}&q=${keyword}&limit=50&offset=${page * 50}&rating=r&lang=en}`
         
     return(
         

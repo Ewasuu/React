@@ -85,6 +85,29 @@ figure{
   width: 100%;
   padding-top: 7rem;
 }
+.gif-container div{
+  border-radius: 20px;
+}
+.gif-container div:nth-child(4n+1){
+
+  background-color: hsl(271, 76%, 53%);
+
+}
+.gif-container div:nth-child(4n+2){
+
+  background-color: hsl(61, 100%, 50%);
+
+}
+.gif-container div:nth-child(4n+3){
+
+  background-color: hsl(0, 100%, 50%);
+
+}
+.gif-container div:nth-child(4n+4){
+
+  background-color: hsl(312, 100%, 50%);
+
+}
 .gif-container div:nth-child(4n+1) {
   grid-row-end: span 1;
 }
